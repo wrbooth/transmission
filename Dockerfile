@@ -4,7 +4,7 @@ MAINTAINER David Personette <dperson@gmail.com>
 # Install transmission
 RUN apk --no-cache --no-progress upgrade && \
     apk --no-cache --no-progress add bash curl shadow sed tini \
-                transmission-daemon tzdata && \
+                transmission-daemon transmission-cli tzdata && \
     dir="/var/lib/transmission-daemon" && \
     file="$dir/info/settings.json" && \
     mv /var/lib/transmission $dir && \
